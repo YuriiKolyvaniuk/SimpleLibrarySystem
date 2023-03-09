@@ -1,0 +1,35 @@
+System do obslugi biblioteki:
+
+-TASKS-
+..........
++  logowanie do systemu
+- mozliwosc dodawania ksiazek (tytul, author, isbn)
+- wyszukiwanie ksiazek - uzytkownik wpisuje tytul lub authora lub isbn (moze byc nie pelna informacja) - wyswietla liste rekordow, dla kazdej ks. pokazac czy jest wypozyczona, jesli tak< to pokazac informacje o osobie wypoz i dacie wyp i zwrotu.
+- wypozyczanie ksiazek, (okres trwa 2 tygodnie) - nalezy podac imie i nazwisko osoby wypozycz...
+- wyszukiwanie wypoz. ks. wraz z osoba wypoz. i od kiedy do kiedy
+- wyszukiwanie wypoz. ks. dla kturych data oddania minela wraz z inf. o osonie wypoz.
+- wyszukiwanie wszystkich ksiazek
+..........
+
+
+-TECHNOLOGIES-
+..........
+- maven
+- baza danych
+- haszowanie do logowania
+- jesli mozliwe - uzycie strumieni
+- uzycie singletonow
+- testy do metod(nie wszystkich)
+..........
+
+UPDATE `books SET `is_rented`=?,`rented_by`=?,`rented_day`=?,`return_day`=? WHERE `isbn`= ? "
+
+Проект должен:
+
+- иметь возможность логина в систему(это в принципе есть, эти методы. работает норм, нужно наверное сохранять юзера нде-то в класе гетерами сетерами)
+- возможность добавления книжек (title, author, isbn)
+- поиск книги по параметрам, пользователь вписывает title или author или isbn - система показывает найденые записи, если она позычена, то показать кем и когда позычена и когда возврат(это надо добавить),пользователь может вписать не полный title or author or isbn и оно вернет все записи, полходящие(вроде работает надо чекнуть норм ли написано и подправить, мб на свое усмотрение)
+- аренда книг (на две недели) - нужно попросить имя и фамилию
+- поиск позыченых книг, показать кем позычена и даты аренды и возврата
+- поиск книг, для которых дата возврата просрочена, показать данные человека который ее арендовал и не вернул
+- поиск всех книг
