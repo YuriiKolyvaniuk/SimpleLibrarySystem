@@ -8,7 +8,6 @@ This application was built using the following technologies:
 - MySQL database
 - Hashing for login security
 - Singleton design pattern
-- Java streams (if possible)
 - JUnit for testing (not all methods)
 ## Features
 ### User Authentication
@@ -31,9 +30,8 @@ This application was built using the following technologies:
 ## How to Run
 1. Clone the repository to your local machine
 2. Navigate to the project directory
-3. Set up a MySQL database and update the database connection details in the DatabaseConnection.java file
-4. Run mvn package to build the application
-5. Run java -jar target/library-system.jar to start the application
+3. Run mvn package to build the application
+4. Run java -jar target/library-system.jar to start the application
 
 ## Conclusion
 This library management system provides basic functionality for managing books in a library setting. The system is secure and user-friendly, making it easy for library staff to add, search for, and rent books. Future improvements could include the ability to reserve books, track overdue fees, and integrate with online library catalogs.
