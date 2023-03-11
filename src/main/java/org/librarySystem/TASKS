@@ -1,3 +1,4 @@
+PL:
 System do obslugi biblioteki:
 
 -TASKS-
@@ -22,14 +23,27 @@ System do obslugi biblioteki:
 - testy do metod(nie wszystkich)
 ..........
 
-UPDATE `books SET `is_rented`=?,`rented_by`=?,`rented_day`=?,`return_day`=? WHERE `isbn`= ? "
+EN:
+Library system:
 
-Проект должен:
+-TASKS-
+..........
++ logging into the system
+- ability to add books (title, author, isbn)
+- searching for books - the user enters the title or author or isbn (may be incomplete information) - displays a list of records for each book. show whether it is rented, if so, show information about the person renting it out and the date of departure and return.
+- borrowing books, (the period lasts 2 weeks) - please provide the name and surname of the borrower...
+- search for items Fr. together with the person and from when to when
+- search for items Fr. for which the delivery date has passed along with the information about the axle
+- search all books
+..........
 
-- иметь возможность логина в систему(это в принципе есть, эти методы. работает норм, нужно наверное сохранять юзера нде-то в класе гетерами сетерами)
-- возможность добавления книжек (title, author, isbn)
-- поиск книги по параметрам, пользователь вписывает title или author или isbn - система показывает найденые записи, если она позычена, то показать кем и когда позычена и когда возврат(это надо добавить),пользователь может вписать не полный title or author or isbn и оно вернет все записи, полходящие(вроде работает надо чекнуть норм ли написано и подправить, мб на свое усмотрение)
-- аренда книг (на две недели) - нужно попросить имя и фамилию
-- поиск позыченых книг, показать кем позычена и даты аренды и возврата
-- поиск книг, для которых дата возврата просрочена, показать данные человека который ее арендовал и не вернул
-- поиск всех книг
+
+-TECHNOLOGIES-
+..........
+- maven
+- database
+- hashing for login
+- if possible - use streams
+- use of singletons
+- tests for methods (not all)
+..........
